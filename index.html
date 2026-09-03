@@ -1,428 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gabbie's Portfolio</title>
+    <title>Gabbie's Portfolio</title>
 
-<style>
-
-/* =========================
-   GENERAL
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background: #f5f5f5;
-    font-family: "Times New Roman", serif;
-}
-
-.container {
-    width: 100%;
-    min-height: 100vh;
-}
-
-
-/* =========================
-   PAGE
-========================= */
-
-.page {
-    width: 100%;
-    min-height: 100vh;
-    background: #320807;
-    color: white;
-    position: relative;
-    overflow: hidden;
-    display: none;
-}
-
-.page.active {
-    display: block;
-}
-
-
-/* =========================
-   NAVIGATION
-========================= */
-
-nav {
-    position: absolute;
-    top: 30px;
-    right: 9%;
-    z-index: 10;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    margin-left: 25px;
-    cursor: pointer;
-}
-
-nav a:hover {
-    opacity: 0.7;
-}
-
-
-/* =========================
-   BLACK DECORATIONS
-========================= */
-
-.circle-top-left {
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    background: #050505;
-    border-radius: 50%;
-    top: 35px;
-    left: 42px;
-}
-
-.circle-top-left-small {
-    position: absolute;
-    width: 28px;
-    height: 28px;
-    background: #050505;
-    border-radius: 50%;
-    top: 45px;
-    left: 110px;
-}
-
-.circle-top-left-tiny {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    background: #050505;
-    border-radius: 50%;
-    top: 90px;
-    left: 100px;
-}
-
-.circle-top-right {
-    position: absolute;
-    width: 125px;
-    height: 105px;
-    background: #050505;
-    top: -5px;
-    right: -35px;
-    border-radius: 0 0 0 100px;
-}
-
-.circle-top-right-small {
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    background: #050505;
-    border-radius: 50%;
-    top: 95px;
-    right: -5px;
-}
-
-.circle-bottom-left {
-    position: absolute;
-    width: 145px;
-    height: 125px;
-    background: #050505;
-    bottom: -55px;
-    left: -40px;
-    border-radius: 100px 100px 0 0;
-}
-
-.circle-bottom-left-small {
-    position: absolute;
-    width: 75px;
-    height: 75px;
-    background: #050505;
-    border-radius: 50%;
-    bottom: -5px;
-    left: 95px;
-}
-
-
-/* =========================
-   HOME
-========================= */
-
-.home-content {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.home-script {
-    position: absolute;
-    font-family: "Brush Script MT", cursive;
-    font-size: 110px;
-    color: #050505;
-    left: 20%;
-    top: 30%;
-    transform: rotate(-8deg);
-    z-index: 1;
-}
-
-.home-title {
-    font-size: 150px;
-    font-weight: normal;
-    letter-spacing: 2px;
-    position: relative;
-    z-index: 2;
-}
-
-.home-subtitle {
-    font-size: 50px;
-    font-weight: normal;
-    margin-top: 20px;
-    position: relative;
-    z-index: 2;
-}
-
-
-/* =========================
-   ABOUT ME
-========================= */
-
-.about-page {
-    padding-top: 100px;
-}
-
-.about-content {
-    width: 78%;
-    margin: 70px auto 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 60px;
-}
-
-.about-text {
-    width: 55%;
-}
-
-.about-script {
-    font-family: "Brush Script MT", cursive;
-    color: #050505;
-    font-size: 48px;
-    margin-bottom: -10px;
-}
-
-.about-text p {
-    font-size: 20px;
-    line-height: 1.35;
-    margin-bottom: 20px;
-}
-
-.photo-frame {
-    width: 260px;
-    height: 360px;
-    background: #d9d9d9;
-    border-radius: 18px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-}
-
-.photo-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-/* =========================
-   SECTION TITLES
-========================= */
-
-.section-title {
-    text-align: center;
-    font-family: "Brush Script MT", cursive;
-    font-size: 50px;
-    font-weight: normal;
-}
-
-
-/* =========================
-   QUIZ
-========================= */
-
-.quiz-page {
-    padding-top: 100px;
-}
-
-.quiz-container {
-    width: 72%;
-    margin: 30px auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px 25px;
-}
-
-.quiz-card {
-    height: 145px;
-    background: #d9d9d9;
-    border-radius: 18px;
-
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-
-    padding-top: 15px;
-
-    color: #111;
-    font-size: 21px;
-}
-
-
-/* QUIZ SCORE */
-
-.quiz-score {
-    font-size: 40px;
-    margin-top: 25px;
-}
-
-
-/* =========================
-   LAB
-========================= */
-
-.lab-page {
-    padding-top: 100px;
-}
-
-.lab-container {
-    width: 74%;
-    margin: 60px auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.lab-item {
-    text-align: center;
-}
-
-.lab-name {
-    font-size: 20px;
-    margin-bottom: 18px;
-}
-
-.lab-card {
-    height: 230px;
-    background: #d9d9d9;
-    border-radius: 18px;
-}
-
-
-/* =========================
-   EXAM
-========================= */
-
-.exam-page {
-    padding-top: 100px;
-}
-
-.exam-container {
-    width: 78%;
-    margin: 35px auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.exam-card {
-    height: 375px;
-    background: #d9d9d9;
-    border-radius: 20px;
-
-    color: #111;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    padding-top: 20px;
-
-    font-size: 30px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 800px) {
-
-    nav {
-        right: 5%;
-        top: 20px;
-    }
-
-    nav a {
-        font-size: 15px;
-        margin-left: 10px;
-    }
-
-    .home-title {
-        font-size: 70px;
-    }
-
-    .home-subtitle {
-        font-size: 28px;
-    }
-
-    .home-script {
-        font-size: 60px;
-        left: 10%;
-    }
-
-    .about-content {
-        width: 85%;
-        flex-direction: column;
-    }
-
-    .about-text {
-        width: 100%;
-    }
-
-    .quiz-container,
-    .lab-container,
-    .exam-container {
-        width: 85%;
-        grid-template-columns: 1fr;
-    }
-
-    .exam-card {
-        height: 300px;
-    }
-
-}
-
-</style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
 <div class="container">
-
 
 <!-- =========================
      HOME
@@ -430,6 +20,7 @@ nav a:hover {
 
 <section id="home" class="page active">
 
+    <!-- Decorations -->
     <div class="circle-top-left"></div>
     <div class="circle-top-left-small"></div>
     <div class="circle-top-left-tiny"></div>
@@ -441,27 +32,16 @@ nav a:hover {
     <div class="circle-bottom-left-small"></div>
 
 
+    <!-- Navigation -->
     <nav>
-
-        <a onclick="showPage('about')">
-            ABOUT ME
-        </a>
-
-        <a onclick="showPage('quiz')">
-            QUIZ
-        </a>
-
-        <a onclick="showPage('lab')">
-            LAB
-        </a>
-
-        <a onclick="showPage('exam')">
-            EXAM
-        </a>
-
+        <a onclick="showPage('about')">ABOUT ME</a>
+        <a onclick="showPage('quiz')">QUIZ</a>
+        <a onclick="showPage('lab')">LAB</a>
+        <a onclick="showPage('exam')">EXAM</a>
     </nav>
 
 
+    <!-- Home Content -->
     <div class="home-content">
 
         <div class="home-script">
@@ -481,13 +61,13 @@ nav a:hover {
 </section>
 
 
-
 <!-- =========================
      ABOUT ME
 ========================= -->
 
 <section id="about" class="page about-page">
 
+    <!-- Decorations -->
     <div class="circle-top-left"></div>
     <div class="circle-top-left-small"></div>
     <div class="circle-top-left-tiny"></div>
@@ -499,31 +79,17 @@ nav a:hover {
     <div class="circle-bottom-left-small"></div>
 
 
+    <!-- Navigation -->
     <nav>
-
-        <a onclick="showPage('home')">
-            HOME
-        </a>
-
-        <a onclick="showPage('about')">
-            ABOUT ME
-        </a>
-
-        <a onclick="showPage('quiz')">
-            QUIZ
-        </a>
-
-        <a onclick="showPage('lab')">
-            LAB
-        </a>
-
-        <a onclick="showPage('exam')">
-            EXAM
-        </a>
-
+        <a onclick="showPage('home')">HOME</a>
+        <a onclick="showPage('about')">ABOUT ME</a>
+        <a onclick="showPage('quiz')">QUIZ</a>
+        <a onclick="showPage('lab')">LAB</a>
+        <a onclick="showPage('exam')">EXAM</a>
     </nav>
 
 
+    <!-- About Content -->
     <div class="about-content">
 
         <div class="about-text">
@@ -532,7 +98,6 @@ nav a:hover {
                 About Me
             </div>
 
-
             <p>
                 Hi! I'm Gabrielle Paula Uadan, a computer science student
                 who enjoys learning new things and expressing myself through
@@ -540,14 +105,12 @@ nav a:hover {
                 or studying. I also enjoy reading manga and manhwa.
             </p>
 
-
             <p>
                 One of my favorite things to do is take pictures. I like
                 capturing moments, places and little things that catch my
                 attention. I also enjoy listening to music and discovering
                 new interests.
             </p>
-
 
             <p>
                 I may be a simple person, but I enjoy finding happiness in
@@ -559,11 +122,12 @@ nav a:hover {
         </div>
 
 
+        <!-- Profile Picture -->
         <div class="photo-frame">
 
             <img
-                src="profile.jpg"
-                alt="Profile Picture"
+                src="photos/gab.photo.jpg"
+                alt="Gabrielle Paula Uadan Profile Picture"
             >
 
         </div>
@@ -573,13 +137,13 @@ nav a:hover {
 </section>
 
 
-
 <!-- =========================
      QUIZ
 ========================= -->
 
 <section id="quiz" class="page quiz-page">
 
+    <!-- Decorations -->
     <div class="circle-top-left"></div>
     <div class="circle-top-left-small"></div>
     <div class="circle-top-left-tiny"></div>
@@ -591,28 +155,13 @@ nav a:hover {
     <div class="circle-bottom-left-small"></div>
 
 
+    <!-- Navigation -->
     <nav>
-
-        <a onclick="showPage('home')">
-            HOME
-        </a>
-
-        <a onclick="showPage('about')">
-            ABOUT ME
-        </a>
-
-        <a onclick="showPage('quiz')">
-            QUIZ
-        </a>
-
-        <a onclick="showPage('lab')">
-            LAB
-        </a>
-
-        <a onclick="showPage('exam')">
-            EXAM
-        </a>
-
+        <a onclick="showPage('home')">HOME</a>
+        <a onclick="showPage('about')">ABOUT ME</a>
+        <a onclick="showPage('quiz')">QUIZ</a>
+        <a onclick="showPage('lab')">LAB</a>
+        <a onclick="showPage('exam')">EXAM</a>
     </nav>
 
 
@@ -621,9 +170,9 @@ nav a:hover {
     </h1>
 
 
+    <!-- Quiz Cards -->
     <div class="quiz-container">
 
-        <!-- QUIZ 1 WITH SCORE -->
         <div class="quiz-card">
 
             <div>
@@ -637,9 +186,6 @@ nav a:hover {
             </div>
 
         </div>
-
-
-        <!-- BLANK QUIZZES -->
 
         <div class="quiz-card">
             QUIZ 2
@@ -666,13 +212,13 @@ nav a:hover {
 </section>
 
 
-
 <!-- =========================
      LAB
 ========================= -->
 
 <section id="lab" class="page lab-page">
 
+    <!-- Decorations -->
     <div class="circle-top-left"></div>
     <div class="circle-top-left-small"></div>
     <div class="circle-top-left-tiny"></div>
@@ -684,28 +230,13 @@ nav a:hover {
     <div class="circle-bottom-left-small"></div>
 
 
+    <!-- Navigation -->
     <nav>
-
-        <a onclick="showPage('home')">
-            HOME
-        </a>
-
-        <a onclick="showPage('about')">
-            ABOUT ME
-        </a>
-
-        <a onclick="showPage('quiz')">
-            QUIZ
-        </a>
-
-        <a onclick="showPage('lab')">
-            LAB
-        </a>
-
-        <a onclick="showPage('exam')">
-            EXAM
-        </a>
-
+        <a onclick="showPage('home')">HOME</a>
+        <a onclick="showPage('about')">ABOUT ME</a>
+        <a onclick="showPage('quiz')">QUIZ</a>
+        <a onclick="showPage('lab')">LAB</a>
+        <a onclick="showPage('exam')">EXAM</a>
     </nav>
 
 
@@ -714,45 +245,86 @@ nav a:hover {
     </h1>
 
 
+    <!-- Lab Cards -->
     <div class="lab-container">
 
+        <!-- LAB 1 -->
         <div class="lab-item">
 
             <div class="lab-name">
                 LAB 1
             </div>
 
-            <div class="lab-item">
+            <div class="lab-card">
 
-    <a href="Uadan-Lab 1.pdf" target="_blank">
-       <img src="lab1..png">
-    </a>
-       
-       <div class="lab-card">
-            LAB 1
+                <img
+                    src="lab1..png"
+                    alt="Lab 1"
+                >
+
+                <a
+                    href="Uadan-Lab 1.pdf"
+                    target="_blank"
+                    class="card-button"
+                >
+                    VIEW LAB
+                </a>
+
+            </div>
+
         </div>
-    </a>
-        </div>
 
 
+        <!-- LAB 2 -->
         <div class="lab-item">
 
             <div class="lab-name">
                 LAB 2
             </div>
 
-            <div class="lab-card"></div>
+            <div class="lab-card">
+
+                <img
+                    src="Png_Lab2.png"
+                    alt="Lab 2"
+                >
+
+                <a
+                    href="Uadan_Lab 2.pdf"
+                    target="_blank"
+                    class="card-button"
+                >
+                    VIEW LAB
+                </a>
+
+            </div>
 
         </div>
 
 
+        <!-- LAB 3 -->
         <div class="lab-item">
 
             <div class="lab-name">
                 LAB 3
             </div>
 
-            <div class="lab-card"></div>
+            <div class="lab-card">
+
+                <img
+                    src="image name ng lab 3 mo po"
+                    alt="Lab 3"
+                >
+
+                <a
+                    href="file name"
+                    target="_blank"
+                    class="card-button"
+                >
+                    VIEW LAB
+                </a>
+
+            </div>
 
         </div>
 
@@ -761,13 +333,13 @@ nav a:hover {
 </section>
 
 
-
 <!-- =========================
-     EXAM
+EXAM
 ========================= -->
 
 <section id="exam" class="page exam-page">
 
+    <!-- Decorations -->
     <div class="circle-top-left"></div>
     <div class="circle-top-left-small"></div>
     <div class="circle-top-left-tiny"></div>
@@ -779,28 +351,13 @@ nav a:hover {
     <div class="circle-bottom-left-small"></div>
 
 
+    <!-- Navigation -->
     <nav>
-
-        <a onclick="showPage('home')">
-            HOME
-        </a>
-
-        <a onclick="showPage('about')">
-            ABOUT ME
-        </a>
-
-        <a onclick="showPage('quiz')">
-            QUIZ
-        </a>
-
-        <a onclick="showPage('lab')">
-            LAB
-        </a>
-
-        <a onclick="showPage('exam')">
-            EXAM
-        </a>
-
+        <a onclick="showPage('home')">HOME</a>
+        <a onclick="showPage('about')">ABOUT ME</a>
+        <a onclick="showPage('quiz')">QUIZ</a>
+        <a onclick="showPage('lab')">LAB</a>
+        <a onclick="showPage('exam')">EXAM</a>
     </nav>
 
 
@@ -809,51 +366,74 @@ nav a:hover {
     </h1>
 
 
+    <!-- Exam Cards -->
     <div class="exam-container">
 
+        <!-- EXAM 1 -->
         <div class="exam-card">
-            Exam
+
+            <img
+                src="photos/exam1.png"
+                alt="Exam 1"
+            >
+
+            <a
+                href="Uadan-Exam 1.pdf"
+                target="_blank"
+                class="card-button"
+            >
+                VIEW EXAM
+            </a>
+
         </div>
 
+
+        <!-- EXAM 2 -->
         <div class="exam-card">
-            Exam
+
+            <img
+                src="photos/exam2.png"
+                alt="Exam 2"
+            >
+
+            <a
+                href="Uadan-Exam 2.pdf"
+                target="_blank"
+                class="card-button"
+            >
+                VIEW EXAM
+            </a>
+
         </div>
 
+
+        <!-- EXAM 3 -->
         <div class="exam-card">
-            Exam
+
+            <img
+                src="photos/exam3.png"
+                alt="Exam 3"
+            >
+
+            <a
+                href="Uadan-Exam 3.pdf"
+                target="_blank"
+                class="card-button"
+            >
+                VIEW EXAM
+            </a>
+
         </div>
 
     </div>
 
 </section>
 
-
 </div>
 
 
+<!-- JavaScript -->
+<script src="script.js"></script>
 
-<script>
-
-/* =========================
-   PAGE NAVIGATION
-========================= */
-
-function showPage(pageId) {
-
-    const pages = document.querySelectorAll(".page");
-
-    pages.forEach(function(page) {
-
-        page.classList.remove("active");
-
-    });
-
-
-    document
-        .getElementById(pageId)
-        .classList.add("active");
-
-    window.scrollTo(0, 0);
-}
-
-</script>
+</body>
+</html>
