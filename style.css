@@ -1,0 +1,458 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f5f5;
+    font-family: "Times New Roman", serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    background: #320807;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: absolute;
+    top: 30px;
+    right: 9%;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+
+/* =========================
+   BLACK DECORATIONS
+========================= */
+
+.circle-top-left {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: #050505;
+    border-radius: 50%;
+    top: 35px;
+    left: 42px;
+}
+
+.circle-top-left-small {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: #050505;
+    border-radius: 50%;
+    top: 45px;
+    left: 110px;
+}
+
+.circle-top-left-tiny {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #050505;
+    border-radius: 50%;
+    top: 90px;
+    left: 100px;
+}
+
+.circle-top-right {
+    position: absolute;
+    width: 125px;
+    height: 105px;
+    background: #050505;
+    top: -5px;
+    right: -35px;
+    border-radius: 0 0 0 100px;
+}
+
+.circle-top-right-small {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: #050505;
+    border-radius: 50%;
+    top: 95px;
+    right: -5px;
+}
+
+.circle-bottom-left {
+    position: absolute;
+    width: 145px;
+    height: 125px;
+    background: #050505;
+    bottom: -55px;
+    left: -40px;
+    border-radius: 100px 100px 0 0;
+}
+
+.circle-bottom-left-small {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: #050505;
+    border-radius: 50%;
+    bottom: -5px;
+    left: 95px;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.home-script {
+    position: absolute;
+    font-family: "Brush Script MT", cursive;
+    font-size: 110px;
+    color: #050505;
+    left: 20%;
+    top: 30%;
+    transform: rotate(-8deg);
+    z-index: 1;
+}
+
+.home-title {
+    font-size: 150px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.home-subtitle {
+    font-size: 50px;
+    font-weight: normal;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   ABOUT ME
+========================= */
+
+.about-page {
+    padding-top: 100px;
+}
+
+.about-content {
+    width: 78%;
+    margin: 70px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.about-text {
+    width: 55%;
+}
+
+.about-script {
+    font-family: "Brush Script MT", cursive;
+    color: #050505;
+    font-size: 48px;
+    margin-bottom: -10px;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.35;
+    margin-bottom: 20px;
+}
+
+.photo-frame {
+    width: 500px;
+    height: 500px;
+    background: #d9d9d9;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title {
+    text-align: center;
+    font-family: "Brush Script MT", cursive;
+    font-size: 50px;
+    font-weight: normal;
+}
+
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-page {
+    padding-top: 100px;
+}
+
+.quiz-container {
+    width: 72%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 25px;
+}
+
+.quiz-card {
+    height: 145px;
+    background: #d9d9d9;
+    border-radius: 18px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 15px;
+    color: #111;
+    font-size: 21px;
+}
+
+
+/* QUIZ SCORE */
+
+.quiz-score {
+    font-size: 40px;
+    margin-top: 25px;
+}
+
+
+/* =========================
+   LAB
+========================= */
+
+.lab-page {
+    padding-top: 100px;
+}
+
+.lab-container {
+    width: 78%;
+    margin: 35px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.lab-item {
+    text-align: center;
+}
+
+.lab-name {
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+
+
+/* LAB CARD */
+
+.lab-card {
+    height: 375px;
+    background: #d9d9d9;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    color: #111;
+    padding-bottom: 15px;
+}
+
+
+/* LAB IMAGE */
+
+.lab-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   EXAM
+========================= */
+
+.exam-page {
+    padding-top: 100px;
+}
+
+.exam-container {
+    width: 78%;
+    margin: 35px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* EXAM CARD */
+
+.exam-card {
+    height: 375px;
+    background: #d9d9d9;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    color: #111;
+    padding-bottom: 15px;
+}
+
+
+/* EXAM IMAGE */
+
+.exam-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* =========================
+   CARD BUTTON
+========================= */
+
+.card-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+
+    background: #320807;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 20px;
+
+    font-size: 16px;
+    font-family: "Times New Roman", serif;
+
+    transition: 0.3s;
+}
+
+.card-button:hover {
+    background: #050505;
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    nav {
+        right: 5%;
+        top: 20px;
+    }
+
+    nav a {
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .home-title {
+        font-size: 70px;
+    }
+
+    .home-subtitle {
+        font-size: 28px;
+    }
+
+    .home-script {
+        font-size: 60px;
+        left: 10%;
+    }
+
+    .about-content {
+        width: 85%;
+        flex-direction: column;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .photo-frame {
+        width: 300px;
+        height: 300px;
+    }
+
+    .quiz-container,
+    .lab-container,
+    .exam-container {
+        width: 85%;
+        grid-template-columns: 1fr;
+    }
+
+    .lab-card,
+    .exam-card {
+        height: 375px;
+    }
+
+    .lab-card img,
+    .exam-card img {
+        height: 280px;
+    }
+}
