@@ -14,425 +14,753 @@
 
 <div class="container">
 
-<!-- =========================
-     HOME
-========================= -->
+<!--Home-->
 
-<section id="home" class="page active">
+    <section id="home" class="page home-page">
 
-    <!-- Decorations -->
-    <div class="circle-top-left"></div>
-    <div class="circle-top-left-small"></div>
-    <div class="circle-top-left-tiny"></div>
+        <div class="page-decor">
+            <div class="circle-top-left"></div>
+            <div class="circle-top-left-small"></div>
+            <div class="circle-top-left-tiny"></div>
 
-    <div class="circle-top-right"></div>
-    <div class="circle-top-right-small"></div>
+            <div class="circle-top-right"></div>
+            <div class="circle-top-right-small"></div>
 
-    <div class="circle-bottom-left"></div>
-    <div class="circle-bottom-left-small"></div>
-
-
-    <!-- Navigation -->
-    <nav>
-        <a onclick="showPage('about')">ABOUT ME</a>
-        <a onclick="showPage('quiz')">QUIZ</a>
-        <a onclick="showPage('lab')">LAB</a>
-        <a onclick="showPage('exam')">EXAM</a>
-    </nav>
-
-
-    <!-- Home Content -->
-    <div class="home-content">
-
-        <div class="home-script">
-            Portfolio
+            <div class="circle-bottom-left"></div>
+            <div class="circle-bottom-left-small"></div>
         </div>
 
-        <h1 class="home-title">
-            PORTFOLIO
+        <nav>
+            <a href="#about">ABOUT ME</a>
+            <a href="#quiz">QUIZ</a>
+            <a href="#lab">LAB</a>
+            <a href="#exam">EXAM</a>
+        </nav>
+
+        <div class="home-content">
+
+            <div class="home-script">
+                Portfolio
+            </div>
+
+            <h1 class="home-title">
+                PORTFOLIO
+            </h1>
+
+            <h2 class="home-subtitle">
+                CLOUD COMPUTING
+            </h2>
+
+        </div>
+
+    </section>
+
+<!--About me-->
+
+    <section id="about" class="page about-page">
+
+        <div class="page-decor">
+            <div class="circle-top-left"></div>
+            <div class="circle-top-left-small"></div>
+            <div class="circle-top-left-tiny"></div>
+
+            <div class="circle-top-right"></div>
+            <div class="circle-top-right-small"></div>
+
+            <div class="circle-bottom-left"></div>
+            <div class="circle-bottom-left-small"></div>
+        </div>
+
+        <nav class="fixed-nav">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT ME</a>
+            <a href="#quiz">QUIZ</a>
+            <a href="#lab">LAB</a>
+            <a href="#exam">EXAM</a>
+        </nav>
+
+        <div class="about-content">
+
+            <div class="about-text">
+
+                <div class="about-script">
+                    About Me
+                </div>
+
+                <p>
+                    Hi! I'm Gabrielle Paula Uadan, a computer science student
+                    who enjoys learning new things and expressing myself through
+                    creativity. I love eating sweets, especially when I'm relaxing
+                    or studying. I also enjoy reading manga and manhwa.
+                </p>
+
+                <p>
+                    One of my favorite things to do is take pictures. I like
+                    capturing moments, places and little things that catch my
+                    attention. I also enjoy listening to music and discovering
+                    new interests.
+                </p>
+
+                <p>
+                    I may be a simple person, but I enjoy finding happiness in
+                    the little things. Through my studies and hobbies, I'm
+                    continuously learning, improving my skills and creating
+                    things that represent who I am.
+                </p>
+
+            </div>
+
+            <div class="photo-frame">
+
+                <img
+                    src="photos/gab.photo.jpg"
+                    alt="Gabrielle Paula Uadan Picture"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!--QUIZ-->
+
+    <section id="quiz" class="page quiz-page">
+
+        <div class="page-decor">
+            <div class="circle-top-left"></div>
+            <div class="circle-top-left-small"></div>
+            <div class="circle-top-left-tiny"></div>
+
+            <div class="circle-top-right"></div>
+            <div class="circle-top-right-small"></div>
+
+            <div class="circle-bottom-left"></div>
+            <div class="circle-bottom-left-small"></div>
+        </div>
+
+        <nav class="fixed-nav">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT ME</a>
+            <a href="#quiz">QUIZ</a>
+            <a href="#lab">LAB</a>
+            <a href="#exam">EXAM</a>
+        </nav>
+
+        <h1 class="section-title">
+            Quiz
         </h1>
 
-        <h2 class="home-subtitle">
-            CLOUD COMPUTING
-        </h2>
+<!-- Quiz folder-->
 
-    </div>
+        <div class="term-container" id="quiz-terms">
 
-</section>
+            <!-- PRELIM -->
 
+            <div class="term-card" onclick="openTerm('prelim-quiz')">
 
-<!-- =========================
-     ABOUT ME
-========================= -->
+                <div class="folder-icon"></div>
 
-<section id="about" class="page about-page">
+                <h2>PRELIM</h2>
 
-    <!-- Decorations -->
-    <div class="circle-top-left"></div>
-    <div class="circle-top-left-small"></div>
-    <div class="circle-top-left-tiny"></div>
+                <button
+                    class="card-button"
+                    type="button"
+                    onclick="event.stopPropagation(); openTerm('prelim-quiz')">
+                    OPEN
+                </button>
 
-    <div class="circle-top-right"></div>
-    <div class="circle-top-right-small"></div>
-
-    <div class="circle-bottom-left"></div>
-    <div class="circle-bottom-left-small"></div>
-
-
-    <!-- Navigation -->
-    <nav>
-        <a onclick="showPage('home')">HOME</a>
-        <a onclick="showPage('about')">ABOUT ME</a>
-        <a onclick="showPage('quiz')">QUIZ</a>
-        <a onclick="showPage('lab')">LAB</a>
-        <a onclick="showPage('exam')">EXAM</a>
-    </nav>
-
-
-    <!-- About Content -->
-    <div class="about-content">
-
-        <div class="about-text">
-
-            <div class="about-script">
-                About Me
             </div>
 
-            <p>
-                Hi! I'm Gabrielle Paula Uadan, a computer science student
-                who enjoys learning new things and expressing myself through
-                creativity. I love eating sweets, especially when I'm relaxing
-                or studying. I also enjoy reading manga and manhwa.
-            </p>
+<!-- MIDTERM -->
 
-            <p>
-                One of my favorite things to do is take pictures. I like
-                capturing moments, places and little things that catch my
-                attention. I also enjoy listening to music and discovering
-                new interests.
-            </p>
+            <div class="term-card" onclick="openTerm('midterm-quiz')">
 
-            <p>
-                I may be a simple person, but I enjoy finding happiness in
-                the little things. Through my studies and hobbies, I'm
-                continuously learning, improving my skills and creating
-                things that represent who I am.
-            </p>
+                <div class="folder-icon"></div>
+
+                <h2>MIDTERM</h2>
+
+                <button
+                    class="card-button"
+                    type="button"
+                    onclick="event.stopPropagation(); openTerm('midterm-quiz')">
+                    OPEN
+                </button>
+
+            </div>
+
+<!-- FINALS -->
+
+            <div class="term-card" onclick="openTerm('finals-quiz')">
+
+                <div class="folder-icon"></div>
+
+                <h2>FINALS</h2>
+
+                <button
+                    class="card-button"
+                    type="button"
+                    onclick="event.stopPropagation(); openTerm('finals-quiz')">
+                    OPEN
+                </button>
+
+            </div>
 
         </div>
 
+<!--PRELIM QUIZ-->
 
-        <!-- Profile Picture -->
-        <div class="photo-frame">
+        <div class="term-content" id="prelim-quiz">
 
-            <img
-                src="photos/gab.photo.jpg"
-                alt="Gabrielle Paula Uadan Profile Picture"
+            <button
+                class="back-button"
+                type="button"
+                onclick="closeTerm('prelim-quiz')"
             >
+                ← BACK
+            </button>
 
-        </div>
+            <h2 class="term-title">
+                PRELIM
+            </h2>
 
-    </div>
+            <div class="assessment-grid">
 
-</section>
+                <div class="assessment-card">
 
+                    <img
+                        src="quiz1.png"
+                        alt="Prelim Quiz 1"
+                    >
 
-<!-- =========================
-     QUIZ
-========================= -->
+                    <h3>QUIZ 1</h3>
 
-<section id="quiz" class="page quiz-page">
+                    <div class="score">
+                        17/20
+                    </div>
 
-    <!-- Decorations -->
-    <div class="circle-top-left"></div>
-    <div class="circle-top-left-small"></div>
-    <div class="circle-top-left-tiny"></div>
-
-    <div class="circle-top-right"></div>
-    <div class="circle-top-right-small"></div>
-
-    <div class="circle-bottom-left"></div>
-    <div class="circle-bottom-left-small"></div>
-
-
-    <!-- Navigation -->
-    <nav>
-        <a onclick="showPage('home')">HOME</a>
-        <a onclick="showPage('about')">ABOUT ME</a>
-        <a onclick="showPage('quiz')">QUIZ</a>
-        <a onclick="showPage('lab')">LAB</a>
-        <a onclick="showPage('exam')">EXAM</a>
-    </nav>
-
-
-    <h1 class="section-title">
-        Quiz
-    </h1>
-
-
-    <!-- Quiz Cards -->
-    <div class="quiz-container">
-
-        <div class="quiz-card">
-
-            <div>
-                <div>
-                    QUIZ 1
                 </div>
 
-                <div class="quiz-score">
-                    17/20
+                <div class="assessment-card">
+
+                    <img
+                        src="img"
+                        alt="Prelim Quiz 2"
+                    >
+
+                    <h3>QUIZ 2</h3>
+
+                    <div class="score">
+                        0/20
+                    </div>
+
                 </div>
+
+                <div class="assessment-card">
+
+                    <img
+                        src="img"
+                        alt="Prelim Quiz 3"
+                    >
+
+                    <h3>QUIZ 3</h3>
+
+                    <div class="score">
+                        0/20
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
 
-        <div class="quiz-card">
-            QUIZ 2
-        </div>
+<!--MIDTERM QUIZ-->
 
-        <div class="quiz-card">
-            QUIZ 3
-        </div>
+        <div class="term-content" id="midterm-quiz">
 
-        <div class="quiz-card">
-            QUIZ 4
-        </div>
+            <button
+                class="back-button"
+                type="button"
+                onclick="closeTerm('midterm-quiz')"
+            >
+                ← BACK
+            </button>
 
-        <div class="quiz-card">
-            QUIZ 5
-        </div>
+            <h2 class="term-title">
+                MIDTERM
+            </h2>
 
-        <div class="quiz-card">
-            QUIZ 6
-        </div>
+            <div class="assessment-grid">
 
-    </div>
+                <div class="assessment-card">
 
-</section>
+                    <img
+                        src="img"
+                        alt="Midterm Quiz 1"
+                    >
 
+                    <h3>QUIZ 1</h3>
 
-<!-- =========================
-     LAB
-========================= -->
+                    <div class="score">
+                        0/20
+                    </div>
 
-<section id="lab" class="page lab-page">
+                </div>
 
-    <!-- Decorations -->
-    <div class="circle-top-left"></div>
-    <div class="circle-top-left-small"></div>
-    <div class="circle-top-left-tiny"></div>
+                <div class="assessment-card">
 
-    <div class="circle-top-right"></div>
-    <div class="circle-top-right-small"></div>
+                    <img
+                        src="img"
+                        alt="Midterm Quiz 2"
+                    >
 
-    <div class="circle-bottom-left"></div>
-    <div class="circle-bottom-left-small"></div>
+                    <h3>QUIZ 2</h3>
 
+                    <div class="score">
+                        0/20
+                    </div>
 
-    <!-- Navigation -->
-    <nav>
-        <a onclick="showPage('home')">HOME</a>
-        <a onclick="showPage('about')">ABOUT ME</a>
-        <a onclick="showPage('quiz')">QUIZ</a>
-        <a onclick="showPage('lab')">LAB</a>
-        <a onclick="showPage('exam')">EXAM</a>
-    </nav>
+                </div>
 
+                <div class="assessment-card">
 
-    <h1 class="section-title">
-        Lab
-    </h1>
+                    <img
+                        src="img"
+                        alt="Midterm Quiz 3"
+                    >
 
+                    <h3>QUIZ 3</h3>
 
-    <!-- Lab Cards -->
-    <div class="lab-container">
+                    <div class="score">
+                        0/20
+                    </div>
 
-        <!-- LAB 1 -->
-        <div class="lab-item">
+                </div>
 
-            <div class="lab-name">
-                LAB 1
             </div>
 
-            <div class="lab-card">
+        </div>
+
+<!--FINALS QUIZ-->
+
+        <div class="term-content" id="finals-quiz">
+
+            <button
+                class="back-button"
+                type="button"
+                onclick="closeTerm('finals-quiz')"
+            >
+                ← BACK
+            </button>
+
+            <h2 class="term-title">
+                FINALS
+            </h2>
+
+            <div class="assessment-grid">
+
+                <div class="assessment-card">
+
+                    <img
+                        src="img"
+                        alt="Finals Quiz 1"
+                    >
+
+                    <h3>QUIZ 1</h3>
+
+                    <div class="score">
+                        0/20
+                    </div>
+
+                </div>
+
+
+                <div class="assessment-card">
+
+                    <img
+                        src="img"
+                        alt="Finals Quiz 2"
+                    >
+
+                    <h3>QUIZ 2</h3>
+
+                    <div class="score">
+                        0/20
+                    </div>
+
+                </div>
+
+
+                <div class="assessment-card">
+
+                    <img
+                        src="img"
+                        alt="Finals Quiz 3"
+                    >
+
+                    <h3>QUIZ 3</h3>
+
+                    <div class="score">
+                        0/20
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--LAB-->
+
+    <section id="lab" class="page lab-page">
+
+        <div class="page-decor">
+            <div class="circle-top-left"></div>
+            <div class="circle-top-left-small"></div>
+            <div class="circle-top-left-tiny"></div>
+
+            <div class="circle-top-right"></div>
+            <div class="circle-top-right-small"></div>
+
+            <div class="circle-bottom-left"></div>
+            <div class="circle-bottom-left-small"></div>
+        </div>
+
+        <nav class="fixed-nav">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT ME</a>
+            <a href="#quiz">QUIZ</a>
+            <a href="#lab">LAB</a>
+            <a href="#exam">EXAM</a>
+        </nav>
+
+        <h1 class="section-title">
+            Lab
+        </h1>
+
+        <!--LAB FOLDERS-->
+
+        <div class="term-container" id="lab-terms">
+
+            <!-- PRELIM -->
+
+            <div class="term-card" onclick="openTerm('prelim-lab')">
+
+                <div class="folder-icon"></div>
+
+                <h2>PRELIM</h2>
+
+                <button
+                    class="card-button"
+                    type="button"
+                    onclick="event.stopPropagation(); openTerm('prelim-lab')"
+                >
+                    OPEN
+                </button>
+
+            </div>
+
+            <!-- MIDTERM -->
+
+            <div class="term-card" onclick="openTerm('midterm-lab')">
+
+                <div class="folder-icon"></div>
+
+                <h2>MIDTERM</h2>
+
+                <button
+                    class="card-button"
+                    type="button"
+                    onclick="event.stopPropagation(); openTerm('midterm-lab')"
+                >
+                    OPEN
+                </button>
+
+            </div>
+
+            <!-- FINALS -->
+
+            <div class="term-card" onclick="openTerm('finals-lab')">
+
+                <div class="folder-icon"></div>
+
+                <h2>FINALS</h2>
+
+                <button
+                    class="card-button"
+                    type="button"
+                    onclick="event.stopPropagation(); openTerm('finals-lab')">
+                    OPEN
+                </button>
+
+            </div>
+
+        </div>
+
+        <!--PRELIM LAB-->
+
+        <div class="term-content" id="prelim-lab">
+
+            <button
+                class="back-button"
+                type="button"
+                onclick="closeTerm('prelim-lab')"
+            >
+                ← BACK
+            </button>
+
+            <h2 class="term-title">
+                PRELIM
+            </h2>
+
+            <div class="assessment-grid">
+
+                <div class="assessment-card">
+
+                    <img src="lab1..png" alt="Lab 1">
+
+                    <h3>LAB 1</h3>
+
+                    
+                    <a href="Uadan-Lab 1.pdf "target="_blank "class="card-button">
+                        VIEW LAB
+                    </a>
+
+                </div>
+
+                <div class="assessment-card">
+
+                    <img src="Png_Lab2.png" alt="Lab 2">
+
+                    <h3>LAB 2</h3>
+
+                    
+                    <a href="Uadan_Lab 2.pdf "target="_blank"
+                        class="card-button">
+                        VIEW LAB
+                    </a>
+
+                </div>
+
+                <div class="assessment-card">
+
+                    <img src="lab3.png" alt="Lab 3">
+
+                    <h3>LAB 3</h3>
+
+                    
+                    <a href="#" class="card-button">
+                        VIEW LAB
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--MIDTERM LAB-->
+
+        <div class="term-content" id="midterm-lab">
+
+            <button
+                class="back-button"
+                type="button"
+                onclick="closeTerm('midterm-lab')"
+            >
+                ← BACK
+            </button>
+
+            <h2 class="term-title">
+                MIDTERM
+            </h2>
+
+            <div class="assessment-grid">
+
+                <div class="assessment-card">
+
+                    <img src="lab4.png" alt="Lab 4">
+
+                    <h3>LAB 1</h3>
+
+                    <a href="#" class="card-button">
+                        VIEW LAB
+                    </a>
+
+                </div>
+
+                <div class="assessment-card">
+
+                    <img src="lab5.png" alt="Lab 5">
+
+                    <h3>LAB 2</h3>
+
+                    <a href="#" class="card-button">
+                        VIEW LAB
+                    </a>
+
+                </div>
+
+                <div class="assessment-card">
+
+                    <img src="lab6.png" alt="Lab 6">
+
+                    <h3>LAB 3</h3>
+
+                    <a href="#" class="card-button">
+                        VIEW LAB
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--FINALS LAB-->
+
+        <div class="term-content" id="finals-lab">
+
+            <button
+                class="back-button"
+                type="button"
+                onclick="closeTerm('finals-lab')"
+            >
+                ← BACK
+            </button>
+
+            <h2 class="term-title">
+                FINALS
+            </h2>
+
+            <div class="assessment-grid">
+
+                <div class="assessment-card">
+
+                    <img src="lab7.png" alt="Lab 7">
+
+                    <h3>LAB 1</h3>
+
+                    <a href="#" class="card-button">
+                        VIEW LAB
+                    </a>
+
+                </div>
+
+                <div class="assessment-card">
+
+                    <img src="lab8.png" alt="Lab 8">
+
+                    <h3>LAB 2</h3>
+
+                    <a href="#" class="card-button">
+                        VIEW LAB
+                    </a>
+
+                </div>
+
+                <div class="assessment-card">
+
+                    <img src="lab9.png" alt="Lab 9">
+
+                    <h3>LAB 3</h3>
+
+                    <a href="#" class="card-button">
+                        VIEW LAB
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--EXAM-->
+
+    <section id="exam" class="page exam-page">
+
+        <div class="page-decor">
+            <div class="circle-top-left"></div>
+            <div class="circle-top-left-small"></div>
+            <div class="circle-top-left-tiny"></div>
+
+            <div class="circle-top-right"></div>
+            <div class="circle-top-right-small"></div>
+
+            <div class="circle-bottom-left"></div>
+            <div class="circle-bottom-left-small"></div>
+        </div>
+
+        <nav class="fixed-nav">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT ME</a>
+            <a href="#quiz">QUIZ</a>
+            <a href="#lab">LAB</a>
+            <a href="#exam">EXAM</a>
+        </nav>
+
+        <h1 class="section-title">
+            Exam
+        </h1>
+
+        <div class="exam-container">
+
+            <div class="exam-card">
 
                 <img
-                    src="lab1..png"
-                    alt="Lab 1"
+                    src="photos/exam1.png"
+                    alt="Exam 1"
                 >
 
-                <a
-                    href="Uadan-Lab 1.pdf"
-                    target="_blank"
-                    class="card-button"
-                >
-                    VIEW LAB
-                </a>
+                <h3>EXAM 1</h3>
+
+                <div class="exam-score">
+                    0/0
+                </div>
 
             </div>
 
-        </div>
-
-
-        <!-- LAB 2 -->
-        <div class="lab-item">
-
-            <div class="lab-name">
-                LAB 2
-            </div>
-
-            <div class="lab-card">
+            <div class="exam-card">
 
                 <img
-                    src="Png_Lab2.png"
-                    alt="Lab 2"
+                    src="photos/exam2.png"
+                    alt="Exam 2"
                 >
 
-                <a
-                    href="Uadan_Lab 2.pdf"
-                    target="_blank"
-                    class="card-button"
-                >
-                    VIEW LAB
-                </a>
+                <h3>EXAM 2</h3>
+
+                <div class="exam-score">
+                    0/0
+                </div>
 
             </div>
 
-        </div>
-
-
-        <!-- LAB 3 -->
-        <div class="lab-item">
-
-            <div class="lab-name">
-                LAB 3
-            </div>
-
-            <div class="lab-card">
+            <div class="exam-card">
 
                 <img
-                    src="image name ng lab 3 mo po"
-                    alt="Lab 3"
+                    src="photos/exam3.png"
+                    alt="Exam 3"
                 >
 
-                <a
-                    href="file name"
-                    target="_blank"
-                    class="card-button"
-                >
-                    VIEW LAB
-                </a>
+                <h3>EXAM 3</h3>
+
+                <div class="exam-score">
+                    0/0
+                </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
-
-
-<!-- =========================
-EXAM
-========================= -->
-
-<section id="exam" class="page exam-page">
-
-    <!-- Decorations -->
-    <div class="circle-top-left"></div>
-    <div class="circle-top-left-small"></div>
-    <div class="circle-top-left-tiny"></div>
-
-    <div class="circle-top-right"></div>
-    <div class="circle-top-right-small"></div>
-
-    <div class="circle-bottom-left"></div>
-    <div class="circle-bottom-left-small"></div>
-
-
-    <!-- Navigation -->
-    <nav>
-        <a onclick="showPage('home')">HOME</a>
-        <a onclick="showPage('about')">ABOUT ME</a>
-        <a onclick="showPage('quiz')">QUIZ</a>
-        <a onclick="showPage('lab')">LAB</a>
-        <a onclick="showPage('exam')">EXAM</a>
-    </nav>
-
-
-    <h1 class="section-title">
-        Exam
-    </h1>
-
-
-    <!-- Exam Cards -->
-    <div class="exam-container">
-
-        <!-- EXAM 1 -->
-        <div class="exam-card">
-
-            <img
-                src="photos/exam1.png"
-                alt="Exam 1"
-            >
-
-            <a
-                href="Uadan-Exam 1.pdf"
-                target="_blank"
-                class="card-button"
-            >
-                VIEW EXAM
-            </a>
-
-        </div>
-
-
-        <!-- EXAM 2 -->
-        <div class="exam-card">
-
-            <img
-                src="photos/exam2.png"
-                alt="Exam 2"
-            >
-
-            <a
-                href="Uadan-Exam 2.pdf"
-                target="_blank"
-                class="card-button"
-            >
-                VIEW EXAM
-            </a>
-
-        </div>
-
-
-        <!-- EXAM 3 -->
-        <div class="exam-card">
-
-            <img
-                src="photos/exam3.png"
-                alt="Exam 3"
-            >
-
-            <a
-                href="Uadan-Exam 3.pdf"
-                target="_blank"
-                class="card-button"
-            >
-                VIEW EXAM
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 </div>
 
-
-<!-- JavaScript -->
 <script src="script.js"></script>
 
 </body>
